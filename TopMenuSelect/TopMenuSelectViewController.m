@@ -51,6 +51,7 @@
     [_scrollView setContentOffset:CGPointMake(ViewWidth * sender.tag, 0) animated:YES];
     float xx = ViewWidth * (sender.tag - 1) * (MENU_BUTTON_WIDTH / ViewWidth) - MENU_BUTTON_WIDTH;
     [_menuScrollView scrollRectToVisible:CGRectMake(xx, 0, ViewWidth, _menuScrollView.frame.size.height) animated:YES];
+    [self refreshTableView:(int)sender.tag];
 }
 
 - (void)addTableViewToScrollView:(UIScrollView *)scrollView count:(NSUInteger)pageCount frame:(CGRect)frame {
