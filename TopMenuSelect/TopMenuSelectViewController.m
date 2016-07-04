@@ -71,6 +71,7 @@
     frame.origin.x = ViewWidth * index;
     [_refreshTableView setFrame:frame];
     _menuTittle = _menuArray[index];
+    self.title = _menuTittle;
     [_refreshTableView reloadData];
 }
 
